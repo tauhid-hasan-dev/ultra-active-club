@@ -5,21 +5,21 @@ const Todos = (props) => {
     const {todo} = props;
     const {picture, name, time, weekday,about} = todo;
     return (
-        <div className=' border-[1px] rounded-lg relative bg-slate-900'>
-            <div className='p-3'>
+        <div className=' shadow-2xl rounded-lg relative bg-item-color '>
+            <div className='p-4'>
                 <img src={picture} alt=""  className='rounded'/>
                 <div className='flex flex-col pt-3  h-52 '>
                     <div >
                         <p className='font-semibold text-2xl'>{name}</p>
-                        <p> {about}</p>
+                        <p className='text-slate-500'> {about}</p>
                     </div>
                     <div className='mt-8'>
-                        <p>{weekday} </p>
-                        <p>Total Time: {time} hrs</p>
+                        <p className='text-slate-500'>{weekday} </p>
+                        <p>Total Time: <span className='font-bold'>{time}</span>  hrs</p>
                     </div>
                 </div>
             </div>
-            <button  className="bg-btn-color hover:bg-orange-400 text-black py-3 px-4 rounded-b absolute bottom-0 w-full flex items-center justify-center gap-3">
+            <button  className="bg-cart-btn-color hover:bg-cyan-500 text-black py-3 px-4 rounded-b absolute bottom-0 w-full flex items-center justify-center gap-3">
                 <p>Add to cart</p>
             </button>
         </div>
