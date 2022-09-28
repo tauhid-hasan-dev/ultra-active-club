@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import ManageTodos from '../ManageTodos/ManageTodos';
 import Todos from '../Todos/Todos';
 import Navbar from '../Navbar/Navbar';
 
 const Main = () => {
+    const [todos, setTodos] = useState([]);
+    const loadData = async()=>{
+        const res = await fetch('data.json');
+        const data = await res.json();
+        setTodos(data);
+    }
+    console.log(todos)
+
+    useEffect(()=>{
+        loadData()
+    },[])
+
     return (
         <div>
             <div>
@@ -12,7 +24,10 @@ const Main = () => {
             </div>
             <div className='grid grid-cols-5'>
                 <div className="products bg-red-500 col-span-5 lg:col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-12 p-20 ">
-                    <Todos></Todos>
+                    {
+                        todos.map(todo =>  <Todos todo={todo}></Todos>)
+                    }
+                   
                 </div>
                 <div className="products bg-lime-500">
                     <ManageTodos></ManageTodos>
