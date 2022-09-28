@@ -7,11 +7,10 @@ const ManageTodos = (props) => {
     
     let totalTime = 0;
     let totalTodos = 0;
-
-    for(const product of cart){  
+    for(const todo of cart){  
         //console.log(product.quantity)            
-        totalTodos = totalTodos + product.quantity 
-        totalTime = totalTime + (product.time * product.quantity)  ;
+        totalTodos = totalTodos + todo.quantity 
+        totalTime = totalTime + (todo.time * todo.quantity)  ;
     }
     
     //console.log(breaktime)
@@ -65,7 +64,7 @@ const ManageTodos = (props) => {
                             <p > <span className='text-2xl '>Activity Time</span> </p>
                         </div>
                         <div>
-                            <p className='text-slate-300 text-2xl'>{totalTime}hrs</p>
+                            <p > <span className='text-slate-300 text-2xl font-bold'>{totalTime} </span> <span className='font-semibold text-slate-600'>hrs</span> </p>
                         </div>
                     </div>
                     <div className='flex items-center bg-main-color px-10 py-5 rounded-2xl justify-between'>
