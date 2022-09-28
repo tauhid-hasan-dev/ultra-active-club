@@ -5,7 +5,7 @@ const Todos = (props) => {
     const {todo} = props;
     const {picture, name, time, weekday,about} = todo;
     return (
-        <div className=' shadow-2xl rounded-lg relative bg-item-color '>
+        <div className=' shadow-2xl rounded-lg relative bg-item-color  border border-slate-800'>
             <div className='p-4'>
                 <img src={picture} alt=""  className='rounded'/>
                 <div className='flex flex-col pt-3  h-52 '>

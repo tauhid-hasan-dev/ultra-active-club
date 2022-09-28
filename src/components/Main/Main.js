@@ -22,13 +22,13 @@ const Main = () => {
             <div>
                 <Navbar></Navbar>
             </div>
-            <div className='grid grid-cols-5 '>
-                <div className="products bg-main-color col-span-5 lg:col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-12 p-1 lg:p-20 text-white">
+            <div className='grid grid-cols-7 '>
+                <div className="products bg-main-color col-span-7 lg:col-span-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-12 p-1 lg:p-20 text-white">
                     {
                         todos.map(todo =>  <Todos todo={todo}></Todos>)
                     }
                 </div>
-                <div className="products bg-item-color border-l border-slate-800 col-span-5 lg:col-span-1 ">
+                <div className="products bg-item-color border-l border-slate-800 col-span-7 lg:col-span-2 ">
                     <ManageTodos></ManageTodos>
                 </div>
             </div>
