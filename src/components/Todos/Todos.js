@@ -20,7 +20,7 @@ const Todos = (props) => {
                 </div>
             </div>
             <button onClick={()=>handleAddtoList(todo)}  className="bg-cart-btn-color hover:bg-cyan-500 text-black py-3 px-4 rounded-b absolute bottom-0 w-full flex items-center justify-center gap-3">
-                <p className='text-bold text-white'>Add to cart</p>
+                <p className='text-bold text-white'>Add to list</p>
             </button>
         </div>
     );

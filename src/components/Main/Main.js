@@ -8,9 +8,17 @@ const Main = () => {
     const [todos, setTodos] = useState([]);
     const [breaktime, setBreakTime] = useState([]);
     const [cart, setCart] = useState([])
-    //console.log(cart)
+    const [takenBreak, setTakenBreak] = useState(0);
+ 
     
-    //console.log(breaktime);
+    
+    const handleBreak = (id)=>{
+         const selected = breaktime.find(p => p.id === id);
+         console.log(selected);
+         setTakenBreak(selected.break);
+    }
+
+
     const handleAddtoList = (todo) =>{
         const selected = cart.find(p => p.id === todo.id);
         const rest = cart.filter(p => p.id !== todo.id);
@@ -58,7 +66,7 @@ const Main = () => {
                     }
                 </div>
                 <div className="products bg-item-color border-l border-slate-800 col-span-7 lg:col-span-2 ">
-                    <ManageTodos breaktime ={breaktime} key={breaktime.id} cart={cart}></ManageTodos>
+                    <ManageTodos takenBreak={takenBreak} breaktime ={breaktime} key={breaktime.id} cart={cart} handleBreak={handleBreak}> </ManageTodos>
                 </div>
             </div>
             

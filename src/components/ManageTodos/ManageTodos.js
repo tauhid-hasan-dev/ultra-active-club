@@ -2,18 +2,16 @@ import React from 'react';
 import Break from '../Break/Break';
 
 const ManageTodos = (props) => {
-    const {breaktime, cart} = props;
-    console.log(cart);
+    const {breaktime, cart, handleBreak, takenBreak} = props;
+    console.log(takenBreak);
     
     let totalTime = 0;
     let totalTodos = 0;
-    for(const todo of cart){  
-        //console.log(product.quantity)            
+    for(const todo of cart){             
         totalTodos = totalTodos + todo.quantity 
         totalTime = totalTime + (todo.time * todo.quantity)  ;
     }
     
-    //console.log(breaktime)
     return (
         <div className='bg-item-color sticky top-0 text-white'>
             <div className='flex flex-col gap-10 sticky top-0 p-10 '>
@@ -48,7 +46,7 @@ const ManageTodos = (props) => {
                         <div className='flex items-center bg-main-color px-5 lg:px-10 py-4 lg:py-5 rounded-2xl justify-between'>
                             <div className='flex justify-between item-center gap-2 lg:gap-3' >
                                 {
-                                    breaktime.map(time => <Break time = {time.break} key={time.id}></Break>) 
+                                    breaktime.map(time => <Break id={time.id} time = {time.break} key={time.id} handleBreak={handleBreak} ></Break>) 
                                 }
                             </div>
                         </div>
@@ -72,7 +70,7 @@ const ManageTodos = (props) => {
                             <p > <span className='text-2xl '>Break Time</span> </p>
                         </div>
                         <div>
-                            <p className='text-slate-300 text-2xl'>00min</p>
+                            <p ><span className='text-slate-300 text-2xl'>{takenBreak}</span> <span className='text-slate-500 ' > min</span></p>
                         </div>
                     </div>
                </div>
