@@ -2,7 +2,18 @@ import React from 'react';
 import Break from '../Break/Break';
 
 const ManageTodos = (props) => {
-    const {breaktime} = props;
+    const {breaktime, cart} = props;
+    console.log(cart);
+    
+    let totalTime = 0;
+    let totalTodos = 0;
+
+    for(const product of cart){  
+        //console.log(product.quantity)            
+        totalTodos = totalTodos + product.quantity 
+        totalTime = totalTime + (product.time * product.quantity)  ;
+    }
+    
     //console.log(breaktime)
     return (
         <div className='bg-item-color sticky top-0 text-white'>
@@ -54,7 +65,7 @@ const ManageTodos = (props) => {
                             <p > <span className='text-2xl '>Activity Time</span> </p>
                         </div>
                         <div>
-                            <p className='text-slate-300 text-2xl'>00hrs</p>
+                            <p className='text-slate-300 text-2xl'>{totalTime}hrs</p>
                         </div>
                     </div>
                     <div className='flex items-center bg-main-color px-10 py-5 rounded-2xl justify-between'>

@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const Todos = (props) => {
-    const {todo} = props;
+    const {todo, handleAddtoList} = props;
     const {picture, name, time, weekday,about} = todo;
     return (
         <div className=' shadow-2xl rounded-lg relative bg-item-color  border border-slate-800'>
@@ -19,7 +19,7 @@ const Todos = (props) => {
                     </div>
                 </div>
             </div>
-            <button  className="bg-cart-btn-color hover:bg-cyan-500 text-black py-3 px-4 rounded-b absolute bottom-0 w-full flex items-center justify-center gap-3">
+            <button onClick={()=>handleAddtoList(todo)}  className="bg-cart-btn-color hover:bg-cyan-500 text-black py-3 px-4 rounded-b absolute bottom-0 w-full flex items-center justify-center gap-3">
                 <p className='text-bold text-white'>Add to cart</p>
             </button>
         </div>

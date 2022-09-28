@@ -5,7 +5,8 @@
       "time": 8,
       "name": "Study",
       "weekday": "Monday",
-      "about": "Saturday will be my study day"
+      "about": "Saturday will be my study day",
+      "quantity": 0
     },
     {
       "id": "63346d35bcf3a9a8a0930c74",
@@ -13,7 +14,8 @@
       "time": 1,
       "name": "Workout",
       "weekday": "Everyday",
-      "about": "Every morning will be my workout time."
+      "about": "Every morning will be my workout time.",
+      "quantity": 0
     },
     {
       "id": "63346d35b5cb00d8c1814adf",
@@ -21,7 +23,8 @@
       "time": 12,
       "name": "Family Time",
       "weekday": "Friday",
-      "about": "Every friday is my family day."
+      "about": "Every friday is my family day.",
+      "quantity": 0
     },
     {
       "id": "63346d35ab37ad80c70b68dd",
@@ -29,7 +32,8 @@
       "time": 1,
       "name": "Client Meeting",
       "weekday": "Tuesday",
-      "about": "Very important meeting."
+      "about": "Very important meeting.",
+      "quantity": 0
     },
     {
       "id": "63346d353f5cf1e0adce2345",
@@ -37,7 +41,8 @@
       "time": 8,
       "name": "Online Training",
       "weekday": "Wednesday",
-      "about": "Professional development training. "
+      "about": "Professional development training.",
+      "quantity": 0
     },
     {
       "id": "63346d357a6145de6c63cc17",
@@ -45,6 +50,7 @@
       "time": 8,
       "name": "Office day",
       "weekday": "Thursday",
-      "about": "Onsite office day. "
+      "about": "Onsite office day. ",
+      "quantity": 0
     }
   ]
