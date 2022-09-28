@@ -17,7 +17,7 @@ const ManageTodos = () => {
                         <p className='text-slate-500 font-semibold'>Weight</p>
                     </div>
                     <div className='flex justify-center flex-col' >
-                        <p > <span className='text-3xl font-semibold'>5.8</span> <span className='font-semibold text-slate-600'>kg</span> </p>
+                        <p > <span className='text-3xl font-semibold'>5.8</span> <span className='font-semibold text-slate-600'></span> </p>
                         <p className='text-slate-500 font-semibold'>Height</p>
                     </div>
                     <div className='flex justify-center flex-col' >
@@ -25,6 +25,28 @@ const ManageTodos = () => {
                         <p className='text-slate-500 font-semibold'>Age</p>
                     </div>
                 </div>
+                
+               <div className='flex flex-col gap-5'>
+                    <div>
+                        <p className='text-2xl font-bold'>Activity Details</p>
+                    </div>
+                    <div className='flex items-center bg-main-color px-10 py-5 rounded-2xl justify-between'>
+                        <div className='flex justify-between item-center br-red-500' >
+                            <p > <span className='text-2xl '>Activity Time</span> </p>
+                        </div>
+                        <div>
+                            <p className='text-slate-300 text-2xl'>00hrs</p>
+                        </div>
+                    </div>
+                    <div className='flex items-center bg-main-color px-10 py-5 rounded-2xl justify-between'>
+                        <div className='flex justify-between item-center br-red-500' >
+                            <p > <span className='text-2xl '>Break Time</span> </p>
+                        </div>
+                        <div>
+                            <p className='text-slate-300 text-2xl'>00min</p>
+                        </div>
+                    </div>
+               </div>
                 
             </div>
         </div>

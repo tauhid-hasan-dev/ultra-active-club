@@ -23,7 +23,7 @@ const Main = () => {
                 <Navbar></Navbar>
             </div>
             <div className='grid grid-cols-7 '>
-                <div className="products bg-main-color col-span-7 lg:col-span-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-12 p-1 lg:p-20 text-white">
+                <div className="products bg-main-color col-span-7 lg:col-span-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-12 p-7 lg:p-20 text-white">
                     {
                         todos.map(todo =>  <Todos todo={todo}></Todos>)
                     }
