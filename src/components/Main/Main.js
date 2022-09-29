@@ -11,12 +11,21 @@ const Main = () => {
     const [takenBreak, setTakenBreak] = useState(0);
  
     
-    
     const handleBreak = (id)=>{
          const selected = breaktime.find(p => p.id === id);
          console.log(selected);
          setTakenBreak(selected.break);
+
+        //setting break time to local storage
+        localStorage.setItem("break-time", JSON.stringify(selected.break))
     }
+
+    //display local storage data to the UI
+    useEffect(()=>{
+        const getItem = localStorage.getItem("break-time");
+        const oldBreakTime = JSON.parse(getItem);
+        setTakenBreak(oldBreakTime)
+    },[])
 
 
     const handleAddtoList = (todo) =>{
@@ -52,7 +61,6 @@ const Main = () => {
     useEffect(()=>{
         loadBreakData()
     },[])
-
 
     return (
         <div>
