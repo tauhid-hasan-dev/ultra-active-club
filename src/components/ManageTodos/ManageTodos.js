@@ -2,9 +2,9 @@ import React from 'react';
 import Break from '../Break/Break';
 
 const ManageTodos = (props) => {
-    const {breaktime, cart, handleBreak, takenBreak} = props;
-    console.log(takenBreak);
+    const {breaktime, cart, handleBreak, takenBreak, handleToast} = props;
     
+    //calculating time
     let totalTime = 0;
     let totalTodos = 0;
     for(const todo of cart){             
@@ -75,7 +75,7 @@ const ManageTodos = (props) => {
                     </div>
                </div>
                <div >
-               <button  className="bg-cart-btn-color hover:bg-cyan-500 text-black py-4 px-4 rounded-lg  bottom-0 w-full flex items-center justify-center gap-3">
+               <button onClick={()=>handleToast()}  className="bg-cart-btn-color hover:bg-cyan-500 text-black py-4 px-4 rounded-lg  bottom-0 w-full flex items-center justify-center gap-3">
                 <p className='font-semibold text-2xl text-slate-100'>Activity Completed</p>
             </button>
                </div>

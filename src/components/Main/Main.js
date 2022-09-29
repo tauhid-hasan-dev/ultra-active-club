@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Swal from 'sweetalert2'
 
 import ManageTodos from '../ManageTodos/ManageTodos';
 import Todos from '../Todos/Todos';
@@ -9,7 +10,14 @@ const Main = () => {
     const [breaktime, setBreakTime] = useState([]);
     const [cart, setCart] = useState([])
     const [takenBreak, setTakenBreak] = useState(0);
- 
+
+    const handleToast = () =>{
+        Swal.fire(
+            'Activity Completed Successfully!',
+            'You are awesome!',
+            'success'
+          )
+    }
     
     const handleBreak = (id)=>{
          const selected = breaktime.find(p => p.id === id);
@@ -27,7 +35,7 @@ const Main = () => {
         setTakenBreak(oldBreakTime)
     },[])
 
-
+    //handling add to list 
     const handleAddtoList = (todo) =>{
         const selected = cart.find(p => p.id === todo.id);
         const rest = cart.filter(p => p.id !== todo.id);
@@ -41,13 +49,15 @@ const Main = () => {
         }
         setCart(newCart) 
     }
-
+    
+    //fetching data for todo list
     const loadTodosData = async()=>{
         const res = await fetch('data.json');
         const data = await res.json();
         setTodos(data);
     }
-
+    
+    //fetching data for break time
     const loadBreakData = async()=>{
         const res = await fetch('break.json');
         const data = await res.json();
@@ -74,7 +84,7 @@ const Main = () => {
                     }
                 </div>
                 <div className="products bg-item-color border-l border-slate-800 col-span-7 lg:col-span-2 ">
-                    <ManageTodos takenBreak={takenBreak} breaktime ={breaktime} key={breaktime.id} cart={cart} handleBreak={handleBreak}> </ManageTodos>
+                    <ManageTodos takenBreak={takenBreak} breaktime ={breaktime} key={breaktime.id} cart={cart} handleBreak={handleBreak} handleToast={handleToast}> </ManageTodos>
                 </div>
             </div>
             
