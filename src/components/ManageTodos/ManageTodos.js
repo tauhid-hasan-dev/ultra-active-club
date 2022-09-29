@@ -70,7 +70,7 @@ const ManageTodos = (props) => {
                             <p > <span className='text-2xl '>Break Time</span> </p>
                         </div>
                         <div >
-                            <p ><span className='text-slate-300 text-2xl font-bold'>{takenBreak}</span> <span className='text-slate-500 ' > min</span></p>
+                            <p ><span className='text-slate-300 text-2xl font-bold'>{takenBreak ? takenBreak : 0}</span> <span className='text-slate-500 ' > min</span></p>
                         </div>
                     </div>
                </div>
