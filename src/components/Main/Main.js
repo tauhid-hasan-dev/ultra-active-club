@@ -78,12 +78,12 @@ const Main = () => {
                 <Navbar></Navbar>
             </div>
             <div className='grid grid-cols-10 '>
-                <div className="products bg-main-color col-span-10 lg:col-span-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 p-7 lg:p-20 text-white border-b border-slate-800">
+                <div className="products bg-main-color col-span-10 lg:col-span-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 p-7 lg:p-20 text-white border-b border-slate-800 order-2 lg:order-1">
                     {
                         todos.map(todo =>  <Todos todo={todo} key={todo.id} handleAddtoList ={handleAddtoList}></Todos>)
                     }
                 </div>
-                <div className="products bg-item-color border-l border-slate-800 col-span-10 lg:col-span-3 ">
+                <div className="products bg-item-color border-l border-slate-800 col-span-10 lg:col-span-3 order-1 lg:order-2 ">
                     <ManageTodos takenBreak={takenBreak} breaktime ={breaktime} key={breaktime.id} cart={cart} handleBreak={handleBreak} handleToast={handleToast} > </ManageTodos>
                 </div>
             </div>
