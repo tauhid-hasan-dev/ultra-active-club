@@ -12,7 +12,6 @@ const Main = () => {
     const [takenBreak, setTakenBreak] = useState(0);
    
 
-
     const handleToast = () =>{
         Swal.fire(
             'Activity Completed Successfully!',
