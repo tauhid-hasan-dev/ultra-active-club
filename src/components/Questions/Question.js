@@ -2,10 +2,10 @@ import React from 'react';
 
 const Question = () => {
     return (
-        <div className="products bg-nav-color col-span-7 lg:col-span-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-12 p-7 lg:p-20 text-white">
+        <div className="products bg-nav-color col-span-7 lg:col-span-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10 p-7 lg:p-20 text-white">
             <div className=' shadow-2xl rounded-lg relative bg-item-color  border border-slate-800'>
                 <div className='p-4  '>
-                    <p className='text-2xl font-bold mb-2'>How Does React Works</p>
+                    <p className='text-lg text-cart-btn-color font-bold mb-2'>How Does React Works</p>
                     <div className='bg-main-color p-2 rounded text-slate-300 flex flex-col gap-3 '>
                         <p>At its very core, React basically maintains a tree for you. React allows you to effectively re-construct your DOM in JavaScript and push only those changes to the DOM which have actually occurred.</p>
 
@@ -22,7 +22,7 @@ const Question = () => {
             </div>
             <div className=' shadow-2xl rounded-lg relative bg-item-color  border border-slate-800'>
                 <div className='p-4  '>
-                    <p className='text-2xl font-bold mb-2'>Differences between props and state</p>
+                    <p className='text-lg text-cart-btn-color font-bold mb-2'>Differences between props and state</p>
                     <div className='bg-main-color p-2 rounded text-slate-300 flex flex-col gap-3 '>
                         <p className='text-lg font-bold text-slate-200'>Props</p>
                         <p>The Data is passed from one component to another is called props</p>
@@ -41,7 +41,7 @@ const Question = () => {
             
             <div className=' shadow-2xl rounded-lg relative bg-item-color  border border-slate-800'>
                 <div className='p-4  '>
-                    <p className='text-2xl font-bold mb-2'>What are the uses of useEffect</p>
+                    <p className='text-lg text-cart-btn-color font-bold mb-2'>What are the uses of useEffect</p>
                     <div className='bg-main-color p-2 rounded text-slate-300 flex flex-col gap-2 '>
                         <p>The useEffect Hook allows you to perform side effects in your components.</p>
 

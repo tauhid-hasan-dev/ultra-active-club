@@ -43,8 +43,8 @@ const ManageTodos = (props) => {
                         <div>
                             <p className='text-2xl font-bold'>Add a Break</p>
                         </div>
-                        <div className='flex items-center bg-main-color px-5 lg:px-10 py-4 lg:py-5 rounded-2xl justify-between'>
-                            <div className='flex justify-between item-center gap-2 lg:gap-3' >
+                        <div className='flex items-center bg-main-color px-5 lg:px-7 py-4 lg:py-5 rounded-2xl justify-between'>
+                            <div className='flex justify-between item-center gap-2 lg:gap-5' >
                                 {
                                     breaktime.map(time => <Break id={time.id} time = {time.break} key={time.id} handleBreak={handleBreak}  ></Break>) 
                                 }
@@ -57,7 +57,7 @@ const ManageTodos = (props) => {
                     <div>
                         <p className='text-2xl font-bold'>Activity Details</p>
                     </div>
-                    <div className='flex items-center bg-main-color px-10 py-5 rounded-2xl justify-between'>
+                    <div className='flex items-center bg-main-color px-7 py-5 rounded-2xl justify-between'>
                         <div className='flex justify-between item-center br-red-500' >
                             <p > <span className='text-2xl '>Activity Time</span> </p>
                         </div>
@@ -65,12 +65,12 @@ const ManageTodos = (props) => {
                             <p > <span className='text-slate-300 text-2xl font-bold'>{totalTime} </span> <span className='font-semibold text-slate-600'>hrs</span> </p>
                         </div>
                     </div>
-                    <div className='flex items-center bg-main-color px-10 py-5 rounded-2xl justify-between'>
+                    <div className='flex items-center bg-main-color px-7 py-5 rounded-2xl justify-between'>
                         <div className='flex justify-between item-center br-red-500' >
                             <p > <span className='text-2xl '>Break Time</span> </p>
                         </div>
-                        <div>
-                            <p ><span className='text-slate-300 text-2xl'>{takenBreak}</span> <span className='text-slate-500 ' > min</span></p>
+                        <div >
+                            <p ><span className='text-slate-300 text-2xl font-bold'>{takenBreak}</span> <span className='text-slate-500 ' > min</span></p>
                         </div>
                     </div>
                </div>
