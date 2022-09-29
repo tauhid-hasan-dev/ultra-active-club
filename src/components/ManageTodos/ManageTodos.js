@@ -34,7 +34,7 @@ const ManageTodos = (props) => {
                         <p className='text-slate-500 font-semibold'>Height</p>
                     </div>
                     <div className='flex justify-center flex-col' >
-                        <p > <span className='text-3xl font-semibold'>75</span> <span className='font-semibold text-slate-600'>yrs</span> </p>
+                        <p > <span className='text-3xl font-semibold'>29</span> <span className='font-semibold text-slate-600'>yrs</span> </p>
                         <p className='text-slate-500 font-semibold'>Age</p>
                     </div>
                 </div>
@@ -46,7 +46,7 @@ const ManageTodos = (props) => {
                         <div className='flex items-center bg-main-color px-5 lg:px-10 py-4 lg:py-5 rounded-2xl justify-between'>
                             <div className='flex justify-between item-center gap-2 lg:gap-3' >
                                 {
-                                    breaktime.map(time => <Break id={time.id} time = {time.break} key={time.id} handleBreak={handleBreak} ></Break>) 
+                                    breaktime.map(time => <Break id={time.id} time = {time.break} key={time.id} handleBreak={handleBreak}  ></Break>) 
                                 }
                             </div>
                         </div>
